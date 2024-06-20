@@ -1,4 +1,4 @@
-export const TaskItem = ({ task }) => {
+export const TaskItem = ({ task, onDeleteTask }) => {
 
    
 
@@ -12,6 +12,13 @@ export const TaskItem = ({ task }) => {
          >
             { task.desc }
          </span>
+
+         <button 
+            className="btn btn-danger"
+            onClick={ () => onDeleteTask( task.id )}
+         >
+            Delete
+         </button>
       </li>
    )
 }

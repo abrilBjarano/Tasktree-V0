@@ -1,6 +1,6 @@
 import { TaskItem } from "./TaskItem";
 
-export const TaskList = ({ tasks }) => {
+export const TaskList = ({ tasks, onDeleteTask }) => {
 
 
    return (
@@ -10,6 +10,7 @@ export const TaskList = ({ tasks }) => {
                <TaskItem 
                   key={ task.id } 
                   task={ task } 
+                  onDeleteTask={ onDeleteTask }
                />
             ))
          }

@@ -44,9 +44,18 @@ export const useTask = () => {
 
    };
 
+   const onDeleteTask = ( taskId ) => {
+      const action = {
+         type: 'DeleteTask',
+         payload: taskId
+      }
+      dispatch( action );
+   }
+
    
    return {
       tasks,
       onAddTask,
+      onDeleteTask
    }
 }
