@@ -1,10 +1,10 @@
+import { TaskAdd } from "./TaskAdd";
 import { TaskList } from "./TaskList";
 import { useTask } from "./hooks/useTask";
 
 export const TaskTree = () => {
 
    const { tasks } = useTask();
-   console.log( tasks );
 
    return (
       <>
@@ -17,7 +17,7 @@ export const TaskTree = () => {
             </div>
 
             <div className="col-5">
-               
+               <TaskAdd />
             </div>
          </div>
       </>
