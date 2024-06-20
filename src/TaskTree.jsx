@@ -4,7 +4,7 @@ import { useTask } from "./hooks/useTask";
 
 export const TaskTree = () => {
 
-   const { tasks, onAddTask, onDeleteTask } = useTask();
+   const { tasks, onAddTask, onDeleteTask, onToggleTask } = useTask();
 
    return (
       <>
@@ -16,6 +16,7 @@ export const TaskTree = () => {
                <TaskList 
                   tasks={ tasks }
                   onDeleteTask={ onDeleteTask } 
+                  onToggleTask={ onToggleTask }
                />
             </div>
 

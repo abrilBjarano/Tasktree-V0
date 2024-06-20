@@ -52,10 +52,19 @@ export const useTask = () => {
       dispatch( action );
    }
 
+   const onToggleTask = ( id ) => {
+      const action = {
+         type: 'ToggleTask',
+         payload: id
+      }
+      dispatch( action );
+   }
+
    
    return {
       tasks,
       onAddTask,
-      onDeleteTask
+      onDeleteTask,
+      onToggleTask
    }
 }

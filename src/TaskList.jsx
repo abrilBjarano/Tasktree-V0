@@ -1,6 +1,6 @@
 import { TaskItem } from "./TaskItem";
 
-export const TaskList = ({ tasks, onDeleteTask }) => {
+export const TaskList = ({ tasks, onDeleteTask, onToggleTask }) => {
 
 
    return (
@@ -11,6 +11,7 @@ export const TaskList = ({ tasks, onDeleteTask }) => {
                   key={ task.id } 
                   task={ task } 
                   onDeleteTask={ onDeleteTask }
+                  onToggleTask={ onToggleTask }
                />
             ))
          }

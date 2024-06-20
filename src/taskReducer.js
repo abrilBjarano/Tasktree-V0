@@ -7,6 +7,19 @@ export const taskReducer = ( initialState = [], action ) => {
       case 'DeleteTask':
          return initialState.filter( task => task.id !== action.payload );
 
+      case 'ToggleTask':
+         return initialState.map( task => {
+
+            if ( task.id === action.payload ) {
+               return {
+                  ...task,
+                  done: !task.done
+               }
+            }
+            
+            return task;
+         });
+
       default:
          return initialState;
    }
