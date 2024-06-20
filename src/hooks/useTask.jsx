@@ -11,12 +11,12 @@ const initialState = [
 
    },
    {
-      id: new Date().getTime() * 3,
+      id: new Date().getTime() * 2,
       desc: 'Planear el viaje a la playa con mi esposa hermosa',
       done: false
    },
    {
-      id: new Date().getTime() * 3,
+      id: new Date().getTime() * 4,
       desc: 'Ir al concierto de JV con mi esposa hermosa',
       done: true
    }
