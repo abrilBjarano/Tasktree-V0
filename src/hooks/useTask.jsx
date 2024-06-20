@@ -1,8 +1,7 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { taskReducer } from "../taskReducer";
 
 
-// 2. Creamos un estado inicial
 const initialState = [
    {
       id: new Date().getTime() * 3,
@@ -22,10 +21,19 @@ const initialState = [
    }
 ]
 
+const init = () => {
+   return JSON.parse(localStorage.getItem('tasks')) || initialState;
+};
+
+
 export const useTask = () => {
 
-   // 1. Usamos el useReducer y luego usamos el taskReducer para manejar las acciones
-   const [ tasks, dispatch ] = useReducer( taskReducer, initialState );
+   const [ tasks, dispatch ] = useReducer( taskReducer, initialState, init );
+
+   useEffect(() => {
+      localStorage.setItem('tasks', JSON.stringify( tasks ));
+   }, [tasks]);
+   
 
    const onAddTask = ( newTask ) => {
       const action = {
