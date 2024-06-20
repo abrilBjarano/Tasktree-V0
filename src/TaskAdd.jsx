@@ -1,26 +1,8 @@
-import { useState } from "react";
+import { useForm } from "./hooks/useForm";
 
 export const TaskAdd = ({ onAddTask }) => {
 
-   const [ inputValue, setInputValue ] = useState('');
-
-   const onInputChange = ({ target }) => {
-      setInputValue( target.value );
-   };
-
-   const onSubmit = ( event ) => {
-      event.preventDefault();
-
-      if ( inputValue.trim().length === 0 ) return;
-
-      const newValue = {
-         id: new Date().getTime() * 3,
-         desc: inputValue.trim(),
-         done: false
-      }
-
-      onAddTask( newValue );
-   };
+   const { onInputChange, onSubmit, inputValue } = useForm({ onAddTask });
 
    return (
       <form onSubmit={ onSubmit }>
