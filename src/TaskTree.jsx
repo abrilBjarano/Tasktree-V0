@@ -11,7 +11,14 @@ export const TaskTree = () => {
          <h1>TaskTree</h1>
 
          <div className="row">
-            <TaskList tasks={ tasks } />
+
+            <div className="col-7">
+               <TaskList tasks={ tasks } />
+            </div>
+
+            <div className="col-5">
+               
+            </div>
          </div>
       </>
    )

@@ -4,3 +4,11 @@ h1 {
   padding: 2rem;
   text-align: center;
 }
+
+body {
+  padding: 20px;
+}
+
+button {
+  margin-right: 10px;
+}
