@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from "react";
 
 export const TaskAdd = ({ onAddTask }) => {
 
@@ -10,6 +10,8 @@ export const TaskAdd = ({ onAddTask }) => {
 
    const onSubmit = ( event ) => {
       event.preventDefault();
+
+      if ( inputValue.trim().length === 0 ) return;
 
       const newValue = {
          id: new Date().getTime() * 3,
