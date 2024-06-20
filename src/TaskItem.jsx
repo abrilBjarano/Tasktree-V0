@@ -4,8 +4,8 @@ export const TaskItem = ({ task }) => {
 
    return (
       <li 
-         key={ task.id }
          className="list-group-item d-flex justify-content-between"
+         key={ task.id }
       >
          <span
             className="align-self-center"

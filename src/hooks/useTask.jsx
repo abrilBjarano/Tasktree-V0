@@ -25,7 +25,7 @@ const initialState = [
 export const useTask = () => {
 
    // 1. Usamos el useReducer y luego usamos el taskReducer para manejar las acciones
-   const [ tasks, dispatch] = useReducer(taskReducer, initialState);
+   const [ tasks, dispatch ] = useReducer( taskReducer, initialState );
 
    const onAddTask = ( newTask ) => {
       const action = {

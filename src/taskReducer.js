@@ -1,8 +1,8 @@
-export const taskReducer = () => {
+export const taskReducer = ( initialState = [], action ) => {
 
-   switch (action.type) {
+   switch ( action.type ) {
       case 'AddTask':
-         return [ initialState, ...action.payload ];
+         return [ ...initialState, action.payload ];
 
       default:
          return initialState;

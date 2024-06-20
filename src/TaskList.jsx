@@ -6,9 +6,12 @@ export const TaskList = ({ tasks }) => {
    return (
       <ul className="list-group">
          {
-            tasks.map( task => {
-               return <TaskItem key={ task.id } task={ task } />
-            })
+            tasks.map( task => (
+               <TaskItem 
+                  key={ task.id } 
+                  task={ task } 
+               />
+            ))
          }
       </ul>
    )

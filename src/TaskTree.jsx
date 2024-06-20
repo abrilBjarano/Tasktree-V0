@@ -4,7 +4,7 @@ import { useTask } from "./hooks/useTask";
 
 export const TaskTree = () => {
 
-   const { tasks } = useTask();
+   const { tasks, onAddTask } = useTask();
 
    return (
       <>
@@ -17,7 +17,7 @@ export const TaskTree = () => {
             </div>
 
             <div className="col-5">
-               <TaskAdd />
+               <TaskAdd onAddTask={ onAddTask } />
             </div>
          </div>
       </>

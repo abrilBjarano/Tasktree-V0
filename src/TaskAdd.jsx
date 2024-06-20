@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export const TaskAdd = () => {
+export const TaskAdd = ({ onAddTask }) => {
 
    const [ inputValue, setInputValue ] = useState('');
 
@@ -11,8 +11,13 @@ export const TaskAdd = () => {
    const onSubmit = ( event ) => {
       event.preventDefault();
 
-      const newTask = inputValue.trim();
-      console.log( newTask );
+      const newValue = {
+         id: new Date().getTime() * 3,
+         desc: inputValue.trim(),
+         done: false
+      }
+
+      onAddTask( newValue );
    };
 
    return (
