@@ -20,6 +20,7 @@ export const useForm = ({ onAddTask }) => {
       }
 
       onAddTask( newValue );
+      setInputValue('');
    };
 
 
