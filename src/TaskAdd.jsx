@@ -29,6 +29,10 @@ export const TaskAdd = ({ onAddTask }) => {
             value={ inputValue }
             onChange={ onInputChange }
          />
+
+         <button className="btn btn-primary mt-2">
+            Add task
+         </button>
       </form>
    )
 }
