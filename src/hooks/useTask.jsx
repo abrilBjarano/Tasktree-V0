@@ -64,11 +64,22 @@ export const useTask = () => {
       dispatch( action );
    }
 
+
+   const tasksCount = () => {
+      return tasks.length;
+   };
+
+   const pendingTasks = () => {
+      return tasks.filter( task => !task.done ).length;
+   };
+
    
    return {
       tasks,
       onAddTask,
       onDeleteTask,
-      onToggleTask
+      onToggleTask,
+      tasksCount,
+      pendingTasks
    }
 }

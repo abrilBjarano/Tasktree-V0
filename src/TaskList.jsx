@@ -1,9 +1,9 @@
 import { TaskItem } from "./TaskItem";
 import backgroundImage from './assets/papper.png';
 
-export const TaskList = ({ tasks, onDeleteTask, onToggleTask }) => {
+export const TaskList = ({ tasks, onDeleteTask, onToggleTask, tasksCount, pendingTasks }) => {
 
-   const listStyle = {
+   const listContainerStyle = {
       backgroundImage: `url(${backgroundImage})`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
@@ -11,16 +11,26 @@ export const TaskList = ({ tasks, onDeleteTask, onToggleTask }) => {
       minHeight: '100vh',
       display: 'flex',
       justifyContent: 'center',
-      paddingTop: '70px',
+      paddingTop: '96px',
       paddingRight: '82px',
+      position: 'relative',
+   };
+
+   const totalTasksStyle = {
+      position: 'absolute',
+      top: 0, 
+      left: '130px',
+      backgroundColor: 'transparent', 
+      paddingTop: '50px', 
    };
 
    const containerStyle = {
-      width: '67%', // Ancho del contenedor de la lista
+      width: '67%', 
    };
 
    return (
-      <div style={listStyle}>
+      <div style={listContainerStyle}>
+         <p style={totalTasksStyle}>Total tasks: { tasksCount() }. Pending tasks { pendingTasks() }</p>
          <div style={containerStyle}>
             <ul className="list-group">
                {
