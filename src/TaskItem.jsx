@@ -17,7 +17,7 @@ export const TaskItem = ({ task, onDeleteTask, onToggleTask }) => {
             className="btn btn-danger"
             onClick={ () => onDeleteTask( task.id )}
          >
-            Delete
+            X
          </button>
       </li>
    )

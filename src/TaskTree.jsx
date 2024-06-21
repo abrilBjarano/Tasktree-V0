@@ -20,7 +20,9 @@ export const TaskTree = () => {
                />
             </div>
 
-            <div className="col-5">
+            <div className="col-1"></div>
+
+            <div className="col-4">
                <TaskAdd onAddTask={ onAddTask } />
             </div>
          </div>
