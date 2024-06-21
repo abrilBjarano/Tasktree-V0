@@ -14,3 +14,7 @@ body {
 button {
   margin-right: 10px;
 }
+
+body {
+  background-color: rgb(200, 225, 234) !important;
+}
