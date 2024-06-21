@@ -3,7 +3,7 @@ h1 {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  padding-bottom: 100px;
+  padding-bottom: 35px;
 }
 
 body {
@@ -16,5 +16,5 @@ button {
 }
 
 body {
-  background-color: rgb(200, 225, 234) !important;
+  background-color: rgb(241, 226, 151) !important;
 }
