@@ -18,6 +18,10 @@ const initialState = [
       id: new Date().getTime() * 4,
       desc: 'Ir al concierto de Julieta Venegas con mi hermosa esposa preciosa',
       done: false
+   },
+   {
+      id: new Date().getTime() * 5, 
+      desc: 'Ir a ver casas con mi bb'
    }
 ]
 

@@ -13,12 +13,12 @@ export const TaskItem = ({ task, onDeleteTask, onToggleTask }) => {
          key={task.id}
          style={itemStyle}
       >
-         <span
-            className={`align-self-center ${ (task.done) ? 'text-decoration-line-through' : '' }`}
+         <h6
+            className={`align-self-center text-muted ${ (task.done) ? 'text-decoration-line-through' : '' }`}
             onClick={() => onToggleTask(task.id)}
          >
-            {task.desc}
-         </span>
+            * {task.desc}
+         </h6>
          <button
             className="btn btn-danger"
             onClick={() => onDeleteTask(task.id)}
