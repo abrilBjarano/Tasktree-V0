@@ -30,7 +30,7 @@ export const TaskList = ({ tasks, onDeleteTask, onToggleTask, tasksCount, pendin
 
    return (
       <div style={listContainerStyle}>
-         <p style={totalTasksStyle}>Total tasks: { tasksCount() }. Pending tasks { pendingTasks() }</p>
+         <p style={totalTasksStyle}>Total tasks: { tasksCount() }. Pending tasks: { pendingTasks() }</p>
          <div style={containerStyle}>
             <ul className="list-group">
                {
