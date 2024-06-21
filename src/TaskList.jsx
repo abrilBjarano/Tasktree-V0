@@ -44,7 +44,7 @@ export const TaskList = ({ tasks, onDeleteTask, onToggleTask, tasksCount, pendin
                   ))
                }
             </ul>
-            {tasks.length === 0 && <h1 className="text-center">No tasks to show</h1>}
+            {tasks.length === 0 && <h1 className="text-center text-danger">No tasks to show</h1>}
          </div>
       </div>
    );
