@@ -5,19 +5,19 @@ import { taskReducer } from "../taskReducer";
 const initialState = [
    {
       id: new Date().getTime() * 3,
-      desc: 'Ir al supermercado CMHEL',
-      done: false,
+      desc: 'Ir al supermercado con mi esposa bella',
+      done: true,
 
    },
    {
       id: new Date().getTime() * 2,
-      desc: 'Planear el viaje a la playa CMHEL',
+      desc: 'Planear bien el viaje a Brasil con mi bebé',
       done: false
    },
    {
       id: new Date().getTime() * 4,
-      desc: 'Ir al concierto de JV CMHEL',
-      done: true
+      desc: 'Ir al concierto de Julieta Venegas con mi hermosa esposa preciosa',
+      done: false
    }
 ]
 
